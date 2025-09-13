@@ -3,22 +3,22 @@
 ## project structure
 ```
 neo-to-cf-migrator/
-├── api/                # FastAPI routes
+├── api/             
 │   ├── __init__.py
-│   ├── git_routes.py   # endpoint: provide Git URL, clone repo
-│   ├── migrate_routes.py # endpoint: start migration
+│   ├── git_routes.py   
+│   ├── migrate_routes.py 
 │
 ├── services/
-│   ├── git_service.py  # logic to clone/pull from Git
-│   ├── migration_service.py # call LangChain agent here
+│   ├── git_service.py  
+│   ├── migration_service.py
 │
 ├── agent/
 │   ├── __init__.py
-│   ├── migration_agent.py  # LangChain agent logic for code conversion
-│   ├── prompts/            # store reusable system prompts/templates
+│   ├── migration_agent.py 
+│   ├── prompts/            
 │
-├── main.py            # FastAPI app entrypoint
-├── config.py          # env vars (Git creds, CF/Neo mappings etc.)
+├── main.py          
+├── config.py       
 │
 │
 ├── requirements.txt
