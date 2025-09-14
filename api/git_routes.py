@@ -28,7 +28,7 @@ def fetch_repo(request: RepoRequest):
             content={
                 "status": "error",
                 "status_code": 500,
-                "message": f"Failed to fetch repo: {str(e)}",
+                "message": f"{str(e)}",
                 "data": None
             }
         )

@@ -14,4 +14,10 @@ def clone_repo(repo_url: str, pat: str) -> str:
         return base_dir
     
     except subprocess.CalledProcessError as e:
-        raise Exception(f"Git error: {e.stderr.strip()}")
+        error_msg = e.stderr.strip().lower()
+        if "invalid username or token" in error_msg:
+            raise Exception("Invalid token")
+        elif "not found" in error_msg:
+            raise Exception("Repository not found")
+        else:
+            raise Exception(f"{e.stderr.strip()}")
