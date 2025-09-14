@@ -6,7 +6,6 @@ app = FastAPI(title="Neo to CF Migrator")
 
 # include routers
 app.include_router(git_routes.router, prefix="/git", tags=["Git"])
-app.include_router(migration_routes.router, prefix="/migrate", tags=["Migration"])
 
 @app.get("/")
 def root():
