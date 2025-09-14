@@ -2,9 +2,7 @@ from pydantic import BaseModel, Field, field_validator
 
 class RepoRequest(BaseModel):
     repo_url: str = Field(..., description="HTTPS URL of the Git repository")
-    username: str = Field(..., description="Git username / personal access token owner")
-    password: str = Field(..., description="Git password / personal access token")
-    description: str | None = Field(None, description="Optional description for this repo")
+    pat: str = Field(..., description="Git personal access token")
 
     @field_validator("repo_url")
     @classmethod
