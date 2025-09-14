@@ -3,24 +3,20 @@
 ## project structure
 ```
 neo-to-cf-migrator/
-├── api/             
-│   ├── __init__.py
-│   ├── git_routes.py   
-│   ├── migrate_routes.py 
-│
-├── services/
-│   ├── git_service.py  
-│   ├── migration_service.py
-│
-├── agent/
-│   ├── __init__.py
-│   ├── migration_agent.py 
-│   ├── prompts/            
-│
-├── main.py          
-├── config.py       
-│
-│
-├── requirements.txt
+├── agent
+├── api
+│   ├── git_routes.py
+│   └── migration_routes.py
+├── models
+│   ├── repo_request.py
+│   └── response_model.py
+├── services
+│   ├── git_service.py
+│   └── migration_service.py
+├── utils
+│   └── response_helper.py
+├── .gitignore
 ├── README.md
+├── main.py
+└── requirements.txt
 ```
