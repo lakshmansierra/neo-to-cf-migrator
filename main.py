@@ -10,7 +10,7 @@ app.include_router(migration_routes.router, prefix="/migrate", tags=["Migration"
 
 @app.get("/")
 def root():
-    return {"message": "Neo to CF Migration API is running 🚀"}
+    return {"message": "Neo to CF Migration API is running"}
 
 if __name__ == "__main__":
     uvicorn.run("main:app", reload=True)
