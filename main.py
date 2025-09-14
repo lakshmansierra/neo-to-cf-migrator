@@ -5,7 +5,6 @@ from fastapi.exceptions import RequestValidationError
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from api import git_routes
-from models.response_model import APIResponse 
 
 app = FastAPI(title="Neo to CF Migrator")
 
